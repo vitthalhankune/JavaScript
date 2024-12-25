@@ -28,3 +28,5 @@ console.log(typeof(state));
 
 //        @ Non-Primitive Datatype @
 //Object
+//Array
+//Function
