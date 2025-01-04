@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langname) {
+        const li = document.createElement('li');
+        li.innerHTML = `${langname}`;
+        document.querySelector('.language').appendChild(li);
+    }
+    addLanguage("paytho");
+    addLanguage("java");
+
+    //optimized way
+    function addOptiLanguage(langname) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langname));
+        document.querySelector('.language').appendChild(li);
+    }
+    addOptiLanguage("goLang");
+
+    //Edit
+
+    const secondLang = document.querySelector("li:nth-child(2)");
+    console.log(secondLang);
+    const newli = document.createElement('li');
+    newli.textContent = "Mojo";
+    secondLang.replaceWith(newli);
+
+    //edit
+
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = "<li>TypeScript</li>";
+
+    //remove
+    const lastLaang = document.querySelector("li:last-child");
+    lastLaang.remove();
+</script>
+
+</html>
